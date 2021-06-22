@@ -39,10 +39,10 @@ function setClasslist() {
 
 
 // LocalStorage
-refs.switch.addEventListener('change', setLocalStorage);
+refs.switcher.addEventListener('change', setLocalStorage);
 
 function setLocalStorage() {
-    const check = refs.switch.checked;
+    const check = refs.switcher.checked;
     if (check) {
       localStorage.setItem('theme', Theme.DARK);
     } else {
@@ -54,6 +54,6 @@ function setLocalStorage() {
   const localTheme = localStorage.getItem('theme');
   if (localTheme === Theme.DARK) {
     refs.body.classList.add(Theme.DARK);
-    refs.switch.checked = true;
+    refs.switcher.checked = true;
   }
   // /LocalStorage
